@@ -21,7 +21,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const database = firebase.database();
 
     document.getElementById('getQR').addEventListener('click', () => {
-        const email = document.getElementById('email').value;
+        const emails = document.getElementById('email').value;
+        const email=emails.toLowerCase();
         checkEmail(email, database);
     });
 });
